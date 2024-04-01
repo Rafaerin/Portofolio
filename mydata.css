@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* body {
+
+    
+    background-color: rgb(197, 190, 190);
+    background:url("Mei\ Recently\ Modifiedf\ 4.png");
+    background-size: 72px;
+    background-position: 0rem;
+    background-position-y:0px;
+    background-position-x: center 0px;
+    
+} */
+:root{
+--primaryTextColor: #111314; 
+--secondaryTextColor : #140b02;
+--thirdBackgroundColor :#f5f3fe;
+--backgroundcolor :#f3ecec;
+--primaryiconcolor:#0e0101;
+--bordercolor:#f1f1f1a8;
+--linecolor: #4e0ec5;
+--sectionPadding :6rem 0;
+--itemBorderRadius: 0.7rem;
+
+
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: rgb(6, 14, 20);
+} 
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--secondaryTextColor);
+}
+
+a{
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 12000px){
+.main-container {
+    width: 90%;
+}
+}
+/* buttons */
+.btn{
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border: 1.5px solid var(--bordercolor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+/* Titles/judul */
+.section-title {
+    margin:1rem 0 4rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.pre-title{
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color:var(--secondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+    
+}
+.pre-title::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: var(--linecolor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+
+}
+
+/* Layout */
+.grid-3{
+display: grid;
+grid-template-columns:none(auto-fit, minmax(250px, 1fr));   
+gap: 3rem;
+
+
+}
+
+
+
+
+/* logo dan menu navigasi */
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem ;
+}
+
+.nav ul {
+ list-style: none;
+ display: flex;
+ gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a{
+    color:var(--primaryTextColor)
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+nav ul li a{
+    color: var(--primaryTextColor)
+}
+
+/* spice */
+.spice div {
+    width:25px;
+    height: 2px;
+    background-color: #000;
+    margin:7px;
+    transition: all .3s;
+    z-index: 99;
+
+}
+
+.spice {
+display: none;
+z-index: 99;
+position: fixed;
+top: 33px;
+right: 35px;
+}
+
+/* hero section */
+
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+
+}
+
+.hero name{
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+
+}
+
+.hero-name span {
+    color: var(--primaryTextColor);
+
+}
+
+.hero-right img {
+    width: 100%;
+    
+
+}
+
+.hero-right{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* Services Section */
+#services {
+    background-color: var(--backgroundcolor);
+    padding:var(--sectionPadding);
+    
+}
+
+.services .pre-title {
+    margin: 0 auto;
+    
+}
+
+.services-title {
+    text-align: center;
+    margin: 0 auto;
+    
+}
+
+.service {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryTextColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 0.5rem;
+
+}
+
+.service-icon {
+    /* background:var(--thirdBackgroundColor); */
+    width: auto;
+    margin: 0 auto;
+    /* padding: 1rem 1.3rem;
+    border-radius: 0.5rem; */
+}
+
+.service-icon svg {
+    fill: var (var(--primaryiconcolor))
+}
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  background: rgba(34, 31, 31, 0.171);
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 10.5em 'Montserrat';
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: rgb(185, 17, 17);
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #db0707;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #ff0303;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #ff0000;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #BD0034;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #f10404;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
