@@ -82,7 +82,7 @@ a{
     text-align: center;
 }
 
-.pre-title{
+.pre-title {
     text-transform: uppercase;
     letter-spacing: .5rem;
     color:var(--secondaryTextColor);
@@ -102,8 +102,11 @@ a{
     display: block;
     left: 0;
     top: 50%;
+    
 
 }
+
+
 
 /* Layout */
 .grid-3{
@@ -207,7 +210,7 @@ right: 35px;
 #services {
     background-color: var(--backgroundcolor);
     padding:var(--sectionPadding);
-    
+    background-color: #ceadad;
 }
 
 .services .pre-title {
@@ -228,11 +231,11 @@ right: 35px;
     border-radius: var(--itemBorderRadius);
 }
 
-.service h4 {
+.services h2 {
     margin: 1.5rem 0;
     font-weight: 500;
-    font-size: 0.5rem;
-
+    font-size: 27px;
+    
 }
 
 .service-icon {
@@ -262,14 +265,14 @@ body{
 svg {
     display: block;
     font: 10.5em 'Montserrat';
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
 }
 
 .text-copy {
     fill: none;
-    stroke: rgb(185, 17, 17);
+    stroke: rgb(14, 10, 10);
     stroke-dasharray: 6% 29%;
     stroke-width: 5px;
     stroke-dashoffset: 0%;
@@ -277,30 +280,94 @@ svg {
 }
 
 .text-copy:nth-child(1){
-	stroke: #db0707;
+	stroke: #0a0a0a;
 	animation-delay: -1;
 }
 
 .text-copy:nth-child(2){
-	stroke: #ff0303;
+	stroke: #0a0a0a;
 	animation-delay: -2s;
 }
 
 .text-copy:nth-child(3){
-	stroke: #ff0000;
+	stroke: #0a0a0a;
 	animation-delay: -3s;
 }
 
 .text-copy:nth-child(4){
-	stroke: #BD0034;
+	stroke: #0a0a0a;
 	animation-delay: -4s;
 }
 
 .text-copy:nth-child(5){
-	stroke: #f10404;
+	stroke: #0a0a0a;
 	animation-delay: -5s;
 }
 
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
 }
+
+#portofolio h3 {
+    text-align: center;
+    
+}
+
+
+#portofolio p {
+text-align: center;
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 80px;
+    height: 40px;
+    color: #000;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    padding: 3px;
+    background: 
+      repeating-linear-gradient(90deg,currentColor 0 10px,#0000 0 15px) 
+      0/0% no-repeat content-box content-box;
+    position: relative;
+    box-sizing: border-box;
+    animation: l5 2s infinite steps(6);
+  }
+  .loader::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: 100%;
+    width: 10px;
+    background:
+      linear-gradient(
+          #0000   calc(50% - 7px),currentColor 0 calc(50% - 5px),
+          #0000 0 calc(50% + 5px),currentColor 0 calc(50% + 7px),#0000 0) left /100% 100%,
+      linear-gradient(currentColor calc(50% - 5px),#0000        0 calc(50% + 5px),currentColor 0) left /2px 100%,
+      linear-gradient(#0000        calc(50% - 5px),currentColor 0 calc(50% + 5px),#0000        0) right/2px 100%;
+    background-repeat:no-repeat;
+  }
+  @keyframes l5 {
+      100% {background-size:120%}
+  }
+
+  /* HTML: <div class="loader"></div> */
+  /* The eror is not disturbing so it's okay */
+.loader2 {
+    width: 60px;
+    height: 50px;
+    --m:no-repeat linear-gradient(90deg,#000 70%,#0000 0);
+    -webkit-mask: 
+      var(--m) calc(0*100%/4) 100%/calc(100%/5) calc(1*100%/5),
+      var(--m) calc(1*100%/4) 100%/calc(100%/5) calc(2*100%/5),
+      var(--m) calc(2*100%/4) 100%/calc(100%/5) calc(3*100%/5),
+      var(--m) calc(3*100%/4) 100%/calc(100%/5) calc(4*100%/5),
+      var(--m) calc(4*100%/4) 100%/calc(100%/5) calc(5*100%/5);
+    background: linear-gradient(#514b82 0 0) left/0% 100% no-repeat #ddd;
+    animation: l14 2s infinite steps(6);
+  }
+  @keyframes l14 {
+    100% {background-size: 120% 100%}
+  }
