@@ -196,8 +196,8 @@ right: 35px;
 
 .hero-right img {
     width: 100%;
-    
-
+    max-width: 100%;
+    height: auto;
 }
 
 .hero-right{
