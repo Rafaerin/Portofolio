@@ -50,11 +50,13 @@ p, span, label, input, textarea, li {
 
 a{
     text-decoration: none;
+    
 }
 
 .main-container {
     width: 1200px;
     margin: 0 auto;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 12000px){
@@ -131,6 +133,7 @@ gap: 3rem;
  list-style: none;
  display: flex;
  gap: 3rem;
+
 }
 
 .logo {
@@ -160,7 +163,7 @@ nav ul li a{
     margin:7px;
     transition: all .3s;
     z-index: 99;
-
+    
 }
 
 .spice {
@@ -172,7 +175,9 @@ right: 35px;
 }
 
 /* hero section */
-
+#hero p {
+    font-size: 20px;
+}
 #hero {
     height: 720px;
     display: grid;
@@ -371,3 +376,60 @@ text-align: center;
   @keyframes l14 {
     100% {background-size: 120% 100%}
   }
+
+ .main-container .nav .logo{
+    font-size: 30px;
+    
+ }
+
+ #clock {
+    font-size: 2rem;
+    text-align: right;  
+
+    
+}
+
+.loader4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    
+    
+}
+
+.loader4 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top: 10px solid #ff6ec4;
+    border-right: 10px solid #ff6ec4;
+    animation: spin 2s linear infinite;
+    position: relative;
+    
+}
+
+.loader4:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    border-top: 10px solid #f3f3f3;
+    border-right: 10px solid #f3f3f3;
+    filter: blur(10px);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

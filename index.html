@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    
+   
       
 <header>
 <div class="main-container">
@@ -45,17 +45,22 @@
     <div class="line-3"></div>
     
 </div>
+
+
 <section id="hero">
     <div class ="hero-left">
         <div class="loader2"></div>
+       
      <h3 class="pre-title">My name is</h3>
      <h1 class="hero-name">Daniel Raharja Lim</h1>
+  
      <p>
       Seseorang yang sedang belajar untuk menggapai cita-cita nya untuk bertugas sebagai web developer di bagian front-end Berbasis JavaScript, CSS Dan HTML dan untuk mengembangkan diri saya yang lebih berguna maka saya akan belajar meng-improvisasi diri saya sendiri dengan cara belajar dan belajar sebab belajar adalah hal yang bersifat seumur hidup
-    </p>
+    </p> 
+    <div class="loader4"></div>
     </div>
  <div class="hero-right">
-     <img src=".//Daniel Raharja Revisi.jpg" width= "800" height= "600" alt="Daniel Lim" />
+     <img src=".//new pfp.jpeg" width= "800" height= "600" alt="Daniel Lim" />
      
  </div>
  </section>
@@ -100,6 +105,7 @@
     <!-- BAGIAN Portofolio -->
     <section id="portofolio">
         <h3 class="pre-title">My Works</h3>
+        <section id ="Contact">
         <h2 class="section-title">Contact</h2>
 
         <h3>Di bawah Ini Adalah Kontak Saya</h3>
@@ -167,6 +173,26 @@
             <use xlink:href="#s-text" class="text-copy"></use>
         </g>
     </svg>
+
+    <div id="clock"></div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        // Update the clock every second
+        setInterval(updateClock, 1000);
+
+        // Initial call to set the clock when the page loads
+        updateClock();
+    </script>
     <body>
         
 </html>
