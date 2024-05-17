@@ -181,7 +181,7 @@ right: 35px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    
+    height: auto;
 
 }
 
@@ -201,6 +201,7 @@ right: 35px;
     width: 100%;
     max-width: 100%;
     height: auto;
+    border-radius: 800px;
 }
 
 .hero-right{
